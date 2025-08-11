@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmaBien - Tu Bienestar, Nuestra Prioridad</title>
+    <link rel="stylesheet" href="/css/css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">FarmaBien ✚</a>
+            <nav>
+                <a href="#hero">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Tu Bienestar,<br>Nuestra Prioridad</h1>
+            <a href="#contacto" class="boton">Visítanos Ahora</a>
+        </section>
+
+        <section id="sobre-nosotros">
+            <div class="container">
+                <div class="img-container">
+                    <img src="/imagenes/farmacia-interior.jpg" alt="Interior de la Farmacia FarmaBien">
+                </div>
+                <div class="texto">
+                    <h2>Somos <span class="color-acento">FarmaBien</span></h2>
+                    <p>En FarmaBien, nos dedicamos a cuidar de tu salud y la de tu familia desde 2010. Somos más que una farmacia; somos un equipo de profesionales comprometidos con ofrecerte la mejor atención, productos de calidad y el consejo experto que necesitas para vivir una vida plena y saludable.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios">
+            <div class="container">
+                <h2>Nuestros Servicios</h2>
+                <div class="cartas-servicios">
+                    <div class="carta">
+                        <h3>Medicina General</h3>
+                        <p>Un amplio stock de medicamentos de las mejores marcas para tratar todo tipo de dolencias, siempre con el mejor precio y asesoramiento.</p>
+                        <a href="#productos" class="boton-carta">+ Ver Más</a>
+                    </div>
+                    <div class="carta">
+                        <h3>Cuidado Personal</h3>
+                        <p>Descubre nuestra línea completa de productos para el cuidado de la piel, el cabello y la higiene personal para toda la familia.</p>
+                        <a href="#productos" class="boton-carta">+ Ver Más</a>
+                    </div>
+                    <div class="carta">
+                        <h3>Vitaminas y Suplementos</h3>
+                        <p>Refuerza tu salud y energía con nuestra selección de vitaminas, suplementos nutricionales y productos naturales.</p>
+                        <a href="#productos" class="boton-carta">+ Ver Más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="productos">
+            <div class="container">
+                <h1>Catálogo de Productos</h1>
+                <p>Aquí encontrarás una selección de nuestros productos más solicitados. Para consultas de stock o productos específicos, no dudes en contactarnos.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Producto</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Analgésicos</td>
+                            <td>Paracetamol 500mg</td>
+                            <td>Alivio eficaz para el dolor de cabeza y la fiebre. Caja de 20 comprimidos.</td>
+                        </tr>
+                        <tr>
+                            <td>Vitaminas</td>
+                            <td>Vitamina C Efervescente</td>
+                            <td>Refuerza tu sistema inmunológico. Tubo con 10 tabletas sabor naranja.</td>
+                        </tr>
+                        <tr>
+                            <td>Cuidado de la Piel</td>
+                            <td>Crema Hidratante Facial</td>
+                            <td>Fórmula con ácido hialurónico para una hidratación profunda. Envase de 50ml.</td>
+                        </tr>
+                        <tr>
+                            <td>Primeros Auxilios</td>
+                            <td>Alcohol en Gel</td>
+                            <td>Desinfectante de manos con 70% de alcohol, elimina el 99.9% de gérmenes.</td>
+                        </tr>
+                        <tr>
+                            <td>Cuidado del Bebé</td>
+                            <td>Pañales Etapa 3</td>
+                            <td>Máxima absorción y suavidad para la piel de tu bebé. Paquete de 40 unidades.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="container">
+                <h1>Ponte en Contacto</h1>
+                <div class="contacto-wrapper">
+                    <div class="info">
+                        <h3>Nuestra Ubicación</h3>
+                        <p>Calle Sucre ,Esq. Bolivar frente al mercado Central de Sacaba</p>
+                        <p>Cochabamba, Bolivia</p>
+
+                        <h3>Teléfono</h3>
+                        <p>(+591) 4-4567890</p>
+
+                        <h3>Horario de Atención</h3>
+                        <p>Lunes a Sábado: 08:00 - 22:00</p>
+                        <p>Domingos y Feriados: 09:00 - 21:00</p>
+                        <img src="/imagenes/mapa.jpg" alt="Mapa de ubicación de la farmacia">
+                    </div>
+
+                    <div class="formulario">
+                        <h3>Envíanos un Mensaje</h3>
+                        <form action="#" method="post">
+                            <div class="form-grupo">
+                                <label for="nombre">Tu Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-grupo">
+                                <label for="email">Tu Correo Electrónico:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-grupo">
+                                <label for="mensaje">Tu Mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="boton">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; FarmaBien 2025</p>
+        </div>
+    </footer>
+
+</body>
+</html>

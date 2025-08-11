@@ -1,0 +1,232 @@
+/* Definiendo algunas variables de color para usar en toda la página */
+:root {
+    --color-primario: #007bff; /* Un azul típico de farmacia */
+    --color-secundario: #4CAF50; /* Un verde para acentos de salud */
+    --color-texto: #333;
+    --color-fondo: #f8f9fa;
+}
+
+/* Agregando desplazamiento suave para la navegación en una sola página */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos generales para toda la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Estilos para el Header y la Navegación */
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    /* Usando Flexbox para alinear el logo y la navegación */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--color-primario);
+}
+
+/* Estilos para las Secciones Principales */
+main section {
+    padding: 60px 0;
+    /* Un pequeño truco para que el anclaje no quede pegado al header */
+    scroll-margin-top: 80px; 
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 85vh; /* Ocupa casi toda la altura visible */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/imagenes/farmacia-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+#hero h1 {
+    font-size: 48px;
+}
+
+.boton {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#sobre-nosotros .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#sobre-nosotros .img-container img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#sobre-nosotros .texto {
+    flex: 1;
+}
+
+.color-acento {
+    color: var(--color-primario);
+}
+
+#servicios h2, #productos h1, #productos p, #contacto h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cartas-servicios {
+    display: flex;
+    gap: 30px;
+}
+
+.carta {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+    flex: 1; /* Para que las 3 cartas ocupen el mismo espacio */
+}
+
+.boton-carta {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* Estilos para la tabla de Productos */
+table {
+    width: 100%;
+    margin-top: 40px;
+    border-collapse: collapse; /* Une los bordes de las celdas */
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table thead {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para la sección de Contacto */
+.contacto-wrapper {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.contacto-wrapper .info, .contacto-wrapper .formulario {
+    flex: 1;
+}
+
+.info img {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-grupo input, .form-grupo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para el Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* --- Media Queries para hacerlo Responsivo --- */
+/* Esto es para que en celulares se vea bien */
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    #hero h1 {
+        font-size: 36px;
+    }
+
+    /* Hago que los elementos que estaban en fila, ahora estén en columna */
+    #sobre-nosotros .container, .cartas-servicios, .contacto-wrapper {
+        flex-direction: column;
+    }
+}
